@@ -1,0 +1,65 @@
+body{
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+
+        }
+        table{
+            background-color: #2e3236;
+            width: 100%;
+            height: 70vh;
+            color: azure;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+        td{
+            background-color: #2a3138;
+            width: 25%;
+            text-align: center;
+            font-size: 30px;
+            
+        }
+
+        td:hover{
+            background-color: #0c3777;
+            cursor: pointer;
+        }
+    #resultArea {
+        height: 30vh;
+        background-color: #041329;
+        font-size: 70px;
+        color: azure;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    #equals{
+        background-color: #2a3138;
+        
+    }
+    #equals:hover{
+        background-color: #5ece5b;
+    }
+    .operator{
+        background-color: #1f2b36;
+    
+
+    
+
+    
+}
+
+
+body{
+
+    #credits{
+        background-color: #041329;
+        color: antiquewhite;
+        font-size: 12px;
+        position: fixed;
+        padding: 6px;  
+        box-sizing: border-box;
+            
+    }
+}

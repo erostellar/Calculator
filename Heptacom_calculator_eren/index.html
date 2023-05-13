@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator_heptacom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <script>
+        function doCalculation(){
+            let container = document.getElementById("resultArea");
+            let result = eval(container.innerHTML);
+
+            container.innerHTML = result;
+        }
+
+        function dieoperation(operation){
+            document.getElementById("resultArea").innerHTML += operation;
+        }
+        function deleteLast(){
+            let container = document.getElementById("resultArea");
+            if(container.innerHTML.endsWith(' ')) {
+                container.innerHTML = container.innerHTML.slice(0, -3);
+            } else {
+                container.innerHTML = container.innerHTML.slice(0, -1);
+            }
+            
+        }
+        function deleteEverything(){
+            let container = document.getElementById("resultArea");
+            container.innerHTML = container.innerHTML.slice(0, -999)
+        }
+
+
+    </script>
+
+
+
+</head>
+
+
+
+<body>
+
+    <div id="credits">
+        
+        Heptacom-calculator challange by Eren
+    
+    </div>
+
+
+
+    <div id="resultArea">
+
+    </div>
+
+    <table>
+        <tr>
+            <td class="operator" onclick="dieoperation('(')">(</td>
+            <td class="operator" onclick="dieoperation(')')">)</td>
+            <td class="operator" onclick="deleteEverything()">CLEAR</td>
+            <td class="operator"onclick="deleteLast()">⌫</td>
+            
+        </tr>
+        <tr>
+            <td onclick="dieoperation(7)">7</td>
+            <td onclick="dieoperation(8)">8</td>
+            <td onclick="dieoperation(9)">9</td>
+            <td onclick="dieoperation(' / ')" class="operator">÷</td>
+        </tr>
+        <tr>
+            <td onclick="dieoperation(4)">4</td>
+            <td onclick="dieoperation(5)">5</td>
+            <td onclick="dieoperation(6)">6</td>
+            <td onclick="dieoperation(' * ')" class="operator">x</td>
+        </tr>
+        <tr>
+            <td onclick="dieoperation(1)">1</td>
+            <td onclick="dieoperation(2)">2</td>
+            <td onclick="dieoperation(3)">3</td>
+            <td onclick="dieoperation(' - ')" class="operator">-</td>
+        </tr>
+        <tr>
+            
+            <td onclick="dieoperation('.')">.</td>
+            <td onclick="dieoperation(0)">0</td>
+            <td onclick="doCalculation()" id="equals">=</td>
+            <td onclick="dieoperation(' + ')" class="operator">+</td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
